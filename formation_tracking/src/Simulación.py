@@ -1,3 +1,4 @@
+from mpl_toolkits.mplot3d.axes3d import Axes3D
 from matplotlib import animation
 import matplotlib.pylab as plt
 import numpy as np
@@ -90,7 +91,7 @@ if estad:
                 'o', color=colores[i], alpha=0.5, label=labels[i])
     ax.legend(bbox_to_anchor=(1.1, 0.5), loc="center left", borderaxespad=0)
     if save:
-        plt.savefig("./src/out/formacion.png")
+        plt.savefig("./src/out/formacion.png", dpi=300, bbox_inches='tight', transparent=True)
 
 
 
@@ -148,7 +149,7 @@ if estad:
                 'o', color=colores[i], alpha=0.5, label=labels[i])
     ax.legend(bbox_to_anchor=(1.1, 0.5), loc="center left", borderaxespad=0)
     if save:
-        plt.savefig("./src/out/condiciones_iniciales.png")
+        plt.savefig("./src/out/condiciones_iniciales.png", dpi=300, bbox_inches='tight', transparent=True)
 
 
 
@@ -217,7 +218,7 @@ if estad:
             label = labels[i]) for i in range(n)]
     ax.legend(bbox_to_anchor=(1.02, 0.5), loc="center left", borderaxespad=0)
     if save:
-        plt.savefig("./src/out/velocidades.png")
+        plt.savefig("./src/out/velocidades.png", dpi=300, bbox_inches='tight', transparent=True)
 
 
 
@@ -260,11 +261,32 @@ def animate(num: int):
             arrx[0, i, 2]], 'o', color=trayec[i], alpha=0.5)
     ax.legend(bbox_to_anchor=(1.1, 0.5), loc="center left", borderaxespad=0)
 
+    # """                                                                                                                                                    
+    # Scaling is done from here...                                                                                                                           
+    # """
+    # x_scale = 1
+    # y_scale = 3
+    # z_scale = 1
+
+    # scale=np.diag([x_scale, y_scale, z_scale, 1.0])
+    # scale=scale*(1.0/scale.max())
+    # scale[3,3]=1.0
+
+    # def short_proj():
+    #     return np.dot(Axes3D.get_proj(ax), scale)
+
+    # ax.get_proj=short_proj
+    # """                                                                                                                                                    
+    # to here                                                                                                                                                
+    # """
 
 # Animación
 if anim:
     fig = plt.figure()
     ax = plt.axes(projection='3d')
+    # ax.azim = -15
+    # ax.elev = 15
+    # ax.dist = 8
     ax.set_title("Simulación")
     plt.subplots_adjust(right=0.8)
     line_ani = animation.FuncAnimation(

@@ -32,8 +32,10 @@ x2 = np.array(x2)
 # plot
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-ax.plot3D(x1[:, 0], x1[:, 1], x1[:, 2], 'c-', label='Lider 1*')
-ax.plot3D(x2[:, 0], x2[:, 1], x2[:, 2], 'm-', label='Lider 2*')
+ax.plot3D(x1[:, 0], x1[:, 1], x1[:, 2], 'c-', label='Lider 1')
+ax.plot3D(x2[:, 0], x2[:, 1], x2[:, 2], 'm-', label='Lider 2')
+ax.plot3D(x1[0, 0], x1[0, 1], x1[0, 2], 'c*')
+ax.plot3D(x2[0, 0], x2[0, 1], x2[0, 2], 'm*')
 ax.legend()
 
 print(x1[0, :])
@@ -51,4 +53,9 @@ t = np.linspace(-2*dist, 0, 100)
 ax.plot3D(t+dist, np.zeros(t.shape), dist*o+5, "black")
 ax.plot3D(dist*o, np.zeros(t.shape), t+dist+5, "black")
 
+ax.azim = -90
+ax.elev = 40
+# ax.dist = 10
+
+plt.savefig("./src/out/trayectoria.png", dpi=300, bbox_inches='tight', transparent=True)
 plt.show()
