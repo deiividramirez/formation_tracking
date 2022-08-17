@@ -73,12 +73,7 @@ wstool merge rotors_hil.rosinstall
 wstool update
 ~~~
 
-Una vez hecho lo anterior, se debe copiar los archivos de la carpeta *Otros* de la siguiente forma
-
-~~~ bash
-* multiple_hummingbirds_example.launch -> ~/catkin_ws/src/rotors_simulator/rotors_gazebo/launch/
-* basic_wall.world -> ~/catkin_ws/src/rotors_simulator/rotors_gazebo/worlds/
-~~~
+Una vez hecho lo anterior, se debe clonar el repositorio de la formación desde GitHub, ejecutando el siguiente comando
 
 ~~~ bash
 cd ~/catkin_ws/src/
