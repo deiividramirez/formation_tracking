@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Formación en cubo de Drones
 
 ## David Leonardo Ramírez Parada
@@ -245,4 +244,3 @@ En otra terminal:
 ~~~ bash
 rosrun formation_tracking formation_tracking
 ~~~
->>>>>>> f314eb9dee612564e46ca70db07d595ab0bb56e7
