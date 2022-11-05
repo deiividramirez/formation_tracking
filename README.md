@@ -56,7 +56,7 @@ Una vez se confirmó la instalación de ROS se podrá usar todo lo siguiente.
 Si no existe el directorio *~/catkin_ws*
 
 ~~~ bash
-mkdir ~/catkin_ws/src
+mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace  # Inicialización del workspace
 ~~~
