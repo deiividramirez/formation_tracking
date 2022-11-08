@@ -230,7 +230,7 @@ Una vez se haya completado el build con catkin se puede correr la simulación de
 En una terminal:
 
 ~~~ bash
-roslaunch rotors_gazebo multiple_hummingbirds_example.launch
+roslaunch formation_tracking multiple_hummingbirds_example.launch
 ~~~
 
 **NOTA:** Como los drones están inicializados en una forma específica, se debería dar click derecho en "Modelos > hummingbird1 > follow" para que se posicione la cámara en la posición correcta.
