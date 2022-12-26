@@ -44,8 +44,8 @@ source ~/.bashrc
 Después
 
 ~~~ bash
-sudo python3 -m pip install -U rosdep catkin_pkg future
-python3 -m pip install -U rosdep catkin_pkg future
+sudo python3 -m pip install -U rosdep catkin_pkg future empy
+python3 -m pip install -U rosdep catkin_pkg future empy
 ~~~
 
 ### Preparación Catkin
